@@ -11,6 +11,102 @@
 */
 
 .page {
+  font-family: var(--main-font-family, sans-serif);
+  font-size: 18px;
+  background-image: var(--background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--main-text-font-weight);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0px;
+}
+
+.header-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #000;
+  padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem) 0;
+  background-color: #fff;
+  inline-size: var(--block-width);
+}
+
+.header-text {
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.header-card__logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header-card__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.main__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.main__card-list-item {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid #000;
+  background-color: #fff;
+  inline-size: var(--block-width);
+}
+
+.card__title {
+  padding: 4px 10px;
+  font-size: inherit;
+  line-height: 100%;
+  font-variation-settings: 'wght' var(--main-title-font-weight);
+}
+
+.card__img {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  line-height: 21px;
+}
+
+.card__like-section {
+  padding: 0 25px 25px;
+  display: flex;
+  justify-content: right;
+  gap: 12px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+}
+
+.button {
+  background-color: transparent;
 }
