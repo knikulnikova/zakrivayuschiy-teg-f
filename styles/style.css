@@ -99,6 +99,40 @@
   aspect-ratio: 1 / 1;
 }
 
+.anticipation-img {
+  filter: contrast(120%);
+}
+
+.adaptation-img {
+  filter: sepia(0.3) hue-rotate(0.04turn);
+  object-position: right;
+}
+
+.inspiration-img {
+  filter: brightness(140%) saturate(185%) contrast(80%);
+  object-position: left;
+}
+
+.perfectionism-img {
+  filter: brightness(75%) blur(2px);
+}
+
+.balance_img {
+  filter: invert(10%);
+}
+
+.search-img {
+  filter: saturate(200%) invert(20%);
+}
+
+.fatigue-img {
+  filter: brightness(75%) grayscale(90%);
+}
+
+.mindfulness-img {
+  filter: saturate(150%);
+}
+
 .card__img-caption {
   position: absolute;
   top: 25px;
@@ -151,6 +185,38 @@
   line-height: 90%;
   background-color: transparent;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  /* mix-blend-mode: difference; */
+}
+
+.button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
+}
+
+.button:focus{
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.button:hover::before {
+  transform: translateX(0%);
 }
 
 .card__like-button {
