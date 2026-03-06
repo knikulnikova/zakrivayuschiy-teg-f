@@ -11,6 +11,11 @@
   --block-width: clamp(320px, 100%, 700px);
   --save-button-width: 335px;
   --color-stroke: #fff;
+  --button-text-color: #fff;
+  --main-text-color: #000;
+  --accent-color: #000;
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
 }
 
 @media (width <= 375px) {
